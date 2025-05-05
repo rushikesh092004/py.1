@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+template <typename T>
+void selectionSort(vector<T>& arr) {
+    int n = arr.size();
+
+    for (int i = 0; i < n - 1; ++i) {
+        int minIndex = i;
+
+        for (int j = i + 1; j < n; ++j) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+
+        if (minIndex != i) {
+            swap(arr[i], arr[minIndex]);
+        }
+    }
+}
+
+int main() {
+    // Example usage with integers
+    vector<int> intArray = {64, 25, 12, 22, 11};
+    selectionSort(intArray);
+
+    cout << "Sorted array: ";
+    for (const auto& element : intArray) {
+        cout << element << " ";
+    }
+
+    return 0;
+}

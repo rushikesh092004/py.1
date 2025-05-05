@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class Name 
+{
+    int age;
+    char[10] name;
+    public:
+    {
+       void  getdata();
+       void   putdata();
+    }
+}:
+void Name :: getdata()
+{
+cout<<"enter your name"<<endl;
+cin>>name;
+cout<<"enter your age"<<endl;
+}
+void::putdata()
+{
+cout<<"\n name ="<<"name";
+cout<<"\n age ="<<"age";
+}
+int main()
+{
+Name obj 
+obj.getdata();
+obj.putdata();
+return 0;
+}
